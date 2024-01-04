@@ -38,7 +38,7 @@ function MainNavigation() {
                 <ul>
                     <LinkItem title='Home' link='/home' val={1} />
                     <li>
-                        <a onClick={logoutFun} href="/" className={`${classes.logoutBtn}`}>Logout</a>
+                        <Link onClick={logoutFun} href="/" className={`${classes.logoutBtn}`}>Logout</Link>
                     </li>
                 </ul>
             </nav>

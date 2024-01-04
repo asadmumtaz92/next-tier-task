@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import classes from './home.module.css'
 import { MongoClient } from 'mongodb';
 import Head from 'next/head';
+import Link from 'next/link';
 
 const Home = (props) => {
 
@@ -24,7 +25,7 @@ const Home = (props) => {
     }
     useEffect(() => {
         checkLoginStatus();
-        getUserData()
+        getUserData();
     }, [])
     // LOGOUT USER
     const logoutFun = () => {
@@ -53,7 +54,7 @@ const Home = (props) => {
                     <p className={`${classes.itemData2}`}>{data?.email}</p>
                 </div>
                 <div className='mt-5'>
-                    <a onClick={logoutFun} href='/' className={`${classes.logoutBtn}`}>LOGOUT</a>
+                    <Link onClick={logoutFun} href='/' className={`${classes.logoutBtn}`}>LOGOUT</Link>
                 </div>
             </main>
         </>

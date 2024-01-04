@@ -107,7 +107,7 @@ const Home = () => {
                     )}
                     {/* SIGN UP LINK */}
                     <p className={`${classes.linkBotm}`}>
-                        You don't have an account? <Link href='/register' className={`${classes.link}`}>Sign Up</Link>
+                        {`You don't have an account?`} <Link href={`/register`} className={`${classes.link}`}>Sign Up</Link>
                     </p>
                 </div>
             </main>
