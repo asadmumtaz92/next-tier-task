@@ -4,7 +4,7 @@ function Footer() {
 
     return (
         <footer className={classes.footer} >
-            <div className={''}>User Auth</div>
+            <div className={''}>NextTier Auth</div>
             <div>
                 <p>Design & Developed </p>
             </div>

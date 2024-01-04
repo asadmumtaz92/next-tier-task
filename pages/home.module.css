@@ -1,10 +1,11 @@
 .main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     flex: 1;
     background-color: #FFFFFF;
     flex-direction: column;
+    margin-top: 5rem;
 }
 
 .title {
@@ -22,4 +23,25 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    min-width: 400px;
+}
+
+.itemData
+{
+    flex: 2;
+}
+.itemData2 {
+    flex: 3;
+    
+}
+.logoutBtn {
+    background-color: #4b6d53;
+    color: #FFFFFF;
+    border-radius: 5px;
+    height: 35px;
+    border: none;
+    font-weight: 700;
+    margin-top: 30px;
+    letter-spacing: 1.2px;
+    padding: 8px 50px;
 }

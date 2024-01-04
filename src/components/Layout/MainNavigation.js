@@ -19,25 +19,26 @@ function MainNavigation() {
 
     // SE ACTIVE TAB
     const activeTabHandler = async (tab) => {
-        // await localStorage.setItem('activePage', JSON.stringify(tab));
         setActiveTab(tab)
     }
 
     // LOGOUT USER
     const logoutFun = () => {
         localStorage.removeItem('loginStatus');
+        localStorage.removeItem('user');
         localStorage.clear();
         router.push('/')
+        // router.reload()
     }
 
     return (
         <header className={classes.header}>
-            <div className={classes.logo}>USer Auth</div>
+            <div className={classes.logo}>NextTier Auth</div>
             <nav>
                 <ul>
                     <LinkItem title='Home' link='/home' val={1} />
                     <li>
-                        <button onClick={logoutFun} className={`${classes.logoutBtn}`}>Logout</button>
+                        <a onClick={logoutFun} href="/" className={`${classes.logoutBtn}`}>Logout</a>
                     </li>
                 </ul>
             </nav>

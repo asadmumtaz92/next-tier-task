@@ -30,7 +30,7 @@ const Layout = (props) => {
                     <main className={`${classes.main} flex min-h-screen bg-white`}>{props.children}</main>
                     <Footer />
                 </>
-                : <main className={`${classes.main} flex min-h-screen items-center justify-center bg-white`}>{props.children}</main>
+                : <main className={`${classes.main} flex min-h-screen bg-white`}>{props.children}</main>
             }
         </>
     )
