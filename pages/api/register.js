@@ -12,13 +12,20 @@ const Handler = async (req, res) => {
         // Create Collection/table
         const prodCollections = db.collection('users');
 
-        // Insert Data in Collection/Table
-        const result = await prodCollections.insertOne(data);
-        console.log('Result =', result);
+        // CHECK THIS EMAIL IS ALREADY REGISTERED OR NOT
+        const checkUserExist = await prodCollections.findOne({ email: data?.email });
 
+        if (checkUserExist?.email === data?.email) {
+            res.status(200).json({ status: false, message: 'This email already registered!' });
+        }
+        else {
+            // Insert Data in Collection/Table
+            const result = await prodCollections.insertOne(data);
+            console.log('Result =', result);
+
+            res.status(201).json({ status: true, message: 'User created successfully!' });
+        }
         client.close();
-
-        res.status(201).json({ status: true, message: 'User created successfully!' });
     }
     else {
         console.log('Something went wrong while creating user.')
